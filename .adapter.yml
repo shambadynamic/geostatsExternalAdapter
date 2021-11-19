@@ -1,0 +1,18 @@
+name: Geospatial Data Mean
+description: An external adapter to get the mean of a geospatial dataset for an Area of Interest.
+node_identifier: geospatial-mean-ea
+platforms:
+  - Docker
+  - AWS Lambda
+  - GCP Functions
+data_sources:
+  - name: Shamba GeoAPI
+    url: https://shamba-gateway-2ycmet71.ew.gateway.dev/geoapi/v1/docs
+parameters:
+  - dataset_code
+  - selected_band
+  - geometry
+  - start_date
+  - end_date
+  - image_scale
+  - output
