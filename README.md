@@ -1,4 +1,4 @@
-# Input Parameter
+# Input Parameters
 
     "dataset_code": The code of the geospatial dataset
     "selected_band": The specific band within the dataset
