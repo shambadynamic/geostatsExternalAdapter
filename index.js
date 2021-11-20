@@ -28,6 +28,7 @@ const createRequest = (input, callback) => {
   const jobRunID = validator.validated.id
   const endpoint = validator.validated.data.endpoint || 'statistics'
   const url = `https://shamba-gateway-2ycmet71.ew.gateway.dev/geoapi/v1/${endpoint}`
+  const dataset_code = validator.validated.data.dataset_code
   const selected_band = validator.validated.data.selected_band
   const geometry = validator.validated.data.geometry
   const start_date = validator.validated.data.start_date
@@ -37,6 +38,7 @@ const createRequest = (input, callback) => {
   //const appid = process.env.API_KEY;
 
   const params = {
+    dataset_code,
     selected_band,
     geometry,
     start_date,
