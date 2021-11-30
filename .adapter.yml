@@ -15,4 +15,3 @@ parameters:
   - start_date
   - end_date
   - image_scale
-  - output

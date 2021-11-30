@@ -18,7 +18,6 @@ const customParams = {
   start_date: ['start_date'],
   end_date: ['end_date'],
   image_scale: ['image_scale'],
-  output: ['output'],
   endpoint: false
 }
 
@@ -34,7 +33,6 @@ const createRequest = (input, callback) => {
   const start_date = validator.validated.data.start_date
   const end_date = validator.validated.data.end_date
   const image_scale = validator.validated.data.image_scale
-  const output = validator.validated.data.output
   //const appid = process.env.API_KEY;
 
   const params = {
@@ -43,8 +41,7 @@ const createRequest = (input, callback) => {
     geometry,
     start_date,
     end_date,
-    image_scale,
-    output
+    image_scale
   }
 
   // This is where you would add method and headers
