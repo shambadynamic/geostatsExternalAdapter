@@ -12,12 +12,12 @@ const customError = (data) => {
 // with a Boolean value indicating whether or not they
 // should be required.
 const customParams = {
-  dataset_code: ['dataset_code'],
-  selected_band: ['selected_band'],
-  geometry: ['geometry'],
-  start_date: ['start_date'],
-  end_date: ['end_date'],
-  image_scale: ['image_scale'],
+  dataset_code: ["dataset_code"],
+  selected_band: ["selected_band"],
+  geometry: ["geometry"],
+  start_date: ["start_date"],
+  end_date: ["end_date"],
+  image_scale: ["image_scale"],
   endpoint: false
 }
 
@@ -25,8 +25,8 @@ const createRequest = (input, callback) => {
   // The Validator helps you validate the Chainlink request data
   const validator = new Validator(callback, input, customParams)
   const jobRunID = validator.validated.id
-  const endpoint = validator.validated.data.endpoint || 'statistics'
-  const url = `https://shamba-gateway-2ycmet71.ew.gateway.dev/geoapi/v1/${endpoint}`
+  const endpoint = validator.validated.data.endpoint || "statistics"
+  const url = `https://shamba-gateway-staging-2ycmet71.ew.gateway.dev/geoapi/v1/${endpoint}`
   const dataset_code = validator.validated.data.dataset_code
   const selected_band = validator.validated.data.selected_band
   const geometry = validator.validated.data.geometry
@@ -50,6 +50,7 @@ const createRequest = (input, callback) => {
   // method = 'get' 
   // headers = 'headers.....'
   const config = {
+    method : "post",
     url,
     params
   }
@@ -61,7 +62,7 @@ const createRequest = (input, callback) => {
       // It's common practice to store the desired value at the top-level
       // result key. This allows different adapters to be compatible with
       // one another.
-      response.data.result = Requester.validateResultNumber(response.data, ['data', 'agg_mean'])
+      response.data.result = Requester.validateResultNumber(response.data, ["data", "agg_mean"])
       callback(response.status, Requester.success(jobRunID, response))
     })
     .catch(error => {
