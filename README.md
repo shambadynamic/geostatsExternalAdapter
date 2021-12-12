@@ -8,9 +8,11 @@
     "end_date": End of the period of interest - string
     "geometry": Geojson defining the area of interest - string
 
-# Output
+# Response
 
-{"jobRunID":0,"data":{"result":"0x00000000000000000000000000000000000000000000000000000000000000ec"},"statusCode":200}
+For example when mean ("agg_mean") is requested, response is:
+
+{"jobRunID":0,"data":{"agg_mean":0.624091649911697,"result":0.624091649911697},"result":0.624091649911697,"statusCode":200}
 
 ## Quick Start
 
