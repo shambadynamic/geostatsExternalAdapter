@@ -1,3 +1,5 @@
+This external adapter gets descriptive statistics from the Shamba geospatial API. It facilitates smart contracts to use satellite data.
+
 # Input Parameters
 
     "agg_x": The descriptive statistics required (aggregated) - string
@@ -6,13 +8,30 @@
     "image_scale": The preferred spatial resolution - string
     "start_date": Start of the period of interest - string
     "end_date": End of the period of interest - string
-    "geometry": Geojson defining the area of interest - string
+    "geometry": Geojson defining the area of interest - object
+
+# Example Request
+   --data '{ "id": 0, "data": {"agg_x":"agg_mean", "dataset_code":"COPERNICUS/S2_SR", "selected_band":"NDVI", "image_scale":"250", "start_date":"2021-09-01", "end_date":"2021-09-10", "geometry":{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[19.51171875,4.214943141390651],[18.28125,-4.740675384778361],[26.894531249999996,-4.565473550710278],[27.24609375,1.2303741774326145],[19.51171875,4.214943141390651]]]}}]}} }'
+
 
 # Response
 
 For example when mean ("agg_mean") is requested, response is:
 
+
 {"jobRunID":0,"data":{"agg_mean":0.624091649911697,"result":0.624091649911697},"result":0.624091649911697,"statusCode":200}
+
+
+# Available descriptive statistics
+ min, mean, median, max, stdDev, variance
+
+# Where to get the GeoJson for the geometry parameter
+ define it here:  https://contracts.shamba.app
+
+# Learn more about the Shamba Geospatial Oracle and APIs
+
+ https://docs.shamba.app
+
 
 ## Quick Start
 
@@ -45,7 +64,7 @@ yarn start
 ## Call the external adapter/API server
 
 ```bash
-curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": { "from": "ETH", "to": "USD" } }'
+curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, ***enter request example above***'
 ```
 
 ## Docker
