@@ -1,12 +1,12 @@
 # Input Parameters
 
-    "dataset_code": The code of the geospatial dataset
-    "selected_band": The specific band within the dataset
-    "image_scale": The preferred spatial resolution
-    "start_date": Start of the period of interest
-    "end_date": End of the period of interest
-    "output": "aggregate" option is recommended here
-    "geometry": Geojson defining the area of interest
+    "agg_x": The descriptive statistics required (aggregated) - string
+    "dataset_code": The code of the geospatial dataset - string
+    "selected_band": The specific band within the dataset - string
+    "image_scale": The preferred spatial resolution - string
+    "start_date": Start of the period of interest - string
+    "end_date": End of the period of interest - string
+    "geometry": Geojson defining the area of interest - string
 
 # Output
 
