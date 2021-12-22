@@ -8,6 +8,7 @@ const port = process.env.EA_PORT || 8080
 app.use(bodyParser.json())
 
 app.post('/', (req, res) => {
+  req.body["data"] = JSON.parse(req.body["data"]);
   console.log('POST Data: ', req.body)
   createRequest(req.body, (status, result) => {
     console.log('Result: ', result)
