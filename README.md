@@ -15,7 +15,7 @@ Uses third-party Chainlink dependancy.
    --data '{ "id": 0, "data": {"agg_x":"agg_mean", "dataset_code":"COPERNICUS/S2_SR", "selected_band":"NDVI", "image_scale":"250", "start_date":"2021-09-01", "end_date":"2021-09-10", "geometry":{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[19.51171875,4.214943141390651],[18.28125,-4.740675384778361],[26.894531249999996,-4.565473550710278],[27.24609375,1.2303741774326145],[19.51171875,4.214943141390651]]]}}]}} }'
 
 
-# Response
+# Curl Response
 
 For example when mean ("agg_mean") is requested, response is:
 
@@ -26,6 +26,8 @@ For example when mean ("agg_mean") is requested, response is:
  
  req.add("data","{\"agg_x\" : \"agg_mean\",\"dataset_code\" : \"MODIS/006/MOD11A1\",\"selected_band\" : \"LST_Day_1km\",\"image_scale\" : 1000,\"start_date\" : \"2021-12-01\",\"end_date\" : \"2022-01-31\",\"geometry\" : {\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[[13.886718749999998,-0.17578097424708533],[27.0703125,4.915832801313164],[27.0703125,-6.664607562172573],[13.886718749999998,-0.17578097424708533]]]}}]}}");
 
+# Smart Contract response
+  int256
 
 # Available descriptive statistics
  min, mean, median, max, stdDev, variance
