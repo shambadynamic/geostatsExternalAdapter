@@ -32,6 +32,10 @@ For example when mean ("agg_mean") is requested, response is:
 # Available descriptive statistics
  min, mean, median, max, stdDev, variance
 
+# Node TOML Job Spec to use with this adapter
+
+ https://github.com/shambadynamic/Chainlink-Node-TOML-Job-Spec-Shamba
+
 # Where to get the GeoJson for the geometry parameter
  define it here:  https://contracts.shamba.app
 
