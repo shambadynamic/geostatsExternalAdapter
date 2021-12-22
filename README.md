@@ -37,7 +37,12 @@ For example when mean ("agg_mean") is requested, response is:
  https://github.com/shambadynamic/Chainlink-Node-TOML-Job-Spec-Shamba
 
 # Where to get the GeoJson for the geometry parameter
- define it here:  https://contracts.shamba.app
+ 
+  Define it here:  https://contracts.shamba.app
+
+# A sample geospatial consumer smart contract 
+ 
+ https://github.com/shambadynamic/geospatialconsumer
 
 # Learn more about the Shamba Geospatial Oracle and APIs
 
