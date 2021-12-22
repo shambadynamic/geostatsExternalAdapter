@@ -49,6 +49,11 @@ For example when mean ("agg_mean") is requested, response is:
  https://docs.shamba.app
 
 
+# Find this external adapter on the Chainlink Market
+
+ https://market.link/adapters/dfaccf98-6458-4c01-b6da-f0cc95eb0ce5
+
+
 ## Quick Start
 
 See [Install Locally](#install-locally) for a quickstart
