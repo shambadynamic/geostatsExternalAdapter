@@ -22,12 +22,12 @@ For example when mean ("agg_mean") is requested, response is:
 
 {"jobRunID":0,"data":{"agg_mean":0.624091649911697,"result":0.624091649911697},"result":0.624091649911697,"statusCode":200}
 
-# Example Solidity request 
+# Example Solidity Smart Contract request 
  
  req.add("data","{\"agg_x\" : \"agg_mean\",\"dataset_code\" : \"MODIS/006/MOD11A1\",\"selected_band\" : \"LST_Day_1km\",\"image_scale\" : 1000,\"start_date\" : \"2021-12-01\",\"end_date\" : \"2022-01-31\",\"geometry\" : {\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[[13.886718749999998,-0.17578097424708533],[27.0703125,4.915832801313164],[27.0703125,-6.664607562172573],[13.886718749999998,-0.17578097424708533]]]}}]}}");
 
 # Smart Contract response
-  int256
+  int256  (GeoAPI response value multiplied by 10**18)
 
 # Available descriptive statistics
  min, mean, median, max, stdDev, variance
