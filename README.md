@@ -1,4 +1,5 @@
 This external adapter gets descriptive statistics from the Shamba geospatial API. It facilitates smart contracts to use satellite data.
+Uses third-party Chainlink dependancy.
 
 # Input Parameters
 

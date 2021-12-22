@@ -23,12 +23,13 @@ const customParams = {
 }
 
 const createRequest = (input, callback) => {
+
     // The Validator helps you validate the Chainlink request data
     const validator = new Validator(callback, input, customParams)
     const jobRunID = validator.validated.id
     const endpoint = validator.validated.data.endpoint || 'statistics'
 
-    const url = `https://shamba-gateway-staging-2ycmet71.ew.gateway.dev/geoapi/v1/${endpoint}`
+    const url = `https://shamba-gateway-2ycmet71.ew.gateway.dev/geoapi/v1/${endpoint}`
 
     const dataset_code = validator.validated.data.dataset_code
     const selected_band = validator.validated.data.selected_band
@@ -69,7 +70,7 @@ const createRequest = (input, callback) => {
             // result key. This allows different adapters to be compatible with
             // one another.
 
-            response.data.result = Requester.validateResultNumber(response.data, ["data", agg_x])
+            response.data.result = Requester.validateResultNumber(response.data, ["data", agg_x]) * (10 ** 18)
             response.data = {
                 [agg_x]: response.data.result,
                 "result": response.data.result
@@ -84,6 +85,7 @@ const createRequest = (input, callback) => {
 // This is a wrapper to allow the function to work with
 // GCP Functions
 exports.gcpservice = (req, res) => {
+    req.body["data"] = JSON.parse(req.body["data"]);
     createRequest(req.body, (statusCode, data) => {
         res.status(statusCode).send(data)
     })

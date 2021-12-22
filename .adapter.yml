@@ -1,6 +1,6 @@
-name: Geospatial Statistics EA
+name: Geospatial Statistics EA v1
 description: An external adapter to get descriptive statistics for a geospatial dataset over an area of interest.
-node_identifier: geospatial-stats-ea
+node_identifier: geospatial-stats-ea-v1
 platforms:
   - Docker
   - AWS Lambda
