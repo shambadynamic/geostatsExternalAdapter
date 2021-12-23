@@ -17,10 +17,15 @@ Uses third-party Chainlink dependancy.
 
 # Curl Response
 
-For example when mean ("agg_mean") is requested, response is:
+For example when mean ("agg_mean") is requested:
 
+API response is:   "agg_mean":0.624091649911697
 
-{"jobRunID":0,"data":{"agg_mean":0.624091649911697,"result":0.624091649911697},"result":0.624091649911697,"statusCode":200}
+This value is multiplied by 10**18 in the adapter.
+
+Adapter response is:
+
+{"jobRunID":0,"data":{"agg_mean":624091649911697000,"result":624091649911697000},"result":624091649911697000,"statusCode":200}
 
 # Example Solidity Smart Contract request 
  
