@@ -49,7 +49,7 @@ Adapter response is:
  
  https://github.com/shambadynamic/geospatialconsumer
 
-# Learn more about the Shamba Geospatial Oracle and APIs
+# Learn more about the Shamba Geospatial Oracle
 
  https://docs.shamba.app
 
